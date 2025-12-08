@@ -157,26 +157,3 @@ if (firstTab) {
     firstTab.classList.remove('border-white/10');
 }
 
-// Form Handling
-function handleFormSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
-    const originalText = btn.innerText;
-    
-    btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Processing...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-        btn.innerHTML = 'Request Received <i class="fas fa-check"></i>';
-        btn.classList.remove('from-brand-blue', 'to-brand-cyan');
-        btn.classList.add('bg-green-500', 'text-white');
-        e.target.reset();
-        
-        setTimeout(() => {
-            btn.innerText = originalText;
-            btn.disabled = false;
-            btn.classList.add('from-brand-blue', 'to-brand-cyan');
-            btn.classList.remove('bg-green-500', 'text-white');
-        }, 4000);
-    }, 2000);
-}
