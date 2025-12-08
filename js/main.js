@@ -157,3 +157,29 @@ if (firstTab) {
     firstTab.classList.remove('border-white/10');
 }
 
+// --- ANTI-THEFT PROTECTION ---
+
+// 1. Disable Right Click
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+
+// 2. Disable Keyboard Shortcuts (F12, Ctrl+U, Ctrl+Shift+I)
+document.addEventListener('keydown', (e) => {
+    // F12
+    if(e.key === 'F12') {
+        e.preventDefault();
+    }
+    // Ctrl+Shift+I (Inspect)
+    if(e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+    }
+    // Ctrl+Shift+J (Console)
+    if(e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+    }
+    // Ctrl+U (View Source)
+    if(e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+    }
+});
