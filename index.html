@@ -1192,59 +1192,58 @@
         </section>
 
         <section id="blog" class="page-section">
-            <div class="bg-brand-black py-24">
+            <div class="bg-brand-black py-24 min-h-screen">
                 <div class="container mx-auto px-6">
                     <div class="flex justify-between items-center mb-16">
-                        <h1 class="text-4xl md:text-5xl font-bold">Insights & <span class="text-gradient">Intelligence</span></h1>
-                        <a href="#" class="hidden md:inline-flex items-center text-brand-blue font-semibold hover:text-white transition">View All Articles <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/5 hover:border-brand-purple/50">
-                            <div class="h-56 bg-gray-800 relative overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/40 to-blue-900/40 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center bg-grid transform group-hover:scale-105 transition duration-700">
-                                    <i class="fas fa-brain text-6xl text-white/10"></i>
-                                </div>
-                                <span class="absolute top-4 left-4 z-20 bg-brand-purple text-white text-xs font-bold px-3 py-1 rounded-full">AI Strategy</span>
-                            </div>
-                            <div class="p-8">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-purple transition">The Rise of Autonomous Agents in 2025</h3>
-                                <p class="text-gray-400 text-sm mb-4">Why manual customer support is dying and how AI agents are reducing overhead by 70%.</p>
-                                <span class="text-brand-purple text-sm font-bold flex items-center gap-2">Read Article <i class="fas fa-arrow-right text-xs"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/5 hover:border-brand-cyan/50">
-                            <div class="h-56 bg-gray-800 relative overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/40 to-blue-900/40 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center bg-grid transform group-hover:scale-105 transition duration-700">
-                                    <i class="fas fa-mobile-alt text-6xl text-white/10"></i>
-                                </div>
-                                <span class="absolute top-4 left-4 z-20 bg-brand-cyan text-black text-xs font-bold px-3 py-1 rounded-full">Tech Demo</span>
-                            </div>
-                            <div class="p-8">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-cyan transition">Web Vitals 2025: Speed is Revenue</h3>
-                                <p class="text-gray-400 text-sm mb-4">See our live demo of a Next.js e-commerce site loading in under 0.8 seconds.</p>
-                                <span class="text-brand-cyan text-sm font-bold flex items-center gap-2">View Demo <i class="fas fa-external-link-alt text-xs"></i></span>
-                            </div>
-                        </div>
-
-                        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/5 hover:border-brand-blue/50">
-                            <div class="h-56 bg-gray-800 relative overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-green-900/40 z-10"></div>
-                                <div class="absolute inset-0 flex items-center justify-center bg-grid transform group-hover:scale-105 transition duration-700">
-                                    <i class="fab fa-tiktok text-6xl text-white/10"></i>
-                                </div>
-                                <span class="absolute top-4 left-4 z-20 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full">Paid Ads</span>
-                            </div>
-                            <div class="p-8">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-blue transition">TikTok Ads vs Meta: Where to Spend?</h3>
-                                <p class="text-gray-400 text-sm mb-4">A data-backed comparison of CPM, CPA, and ROAS across platforms for Q1 2025.</p>
-                                <span class="text-brand-blue text-sm font-bold flex items-center gap-2">Read Report <i class="fas fa-chart-line text-xs"></i></span>
-                            </div>
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">Insights & <span class="text-gradient">Intelligence</span></h1>
+                            <p class="text-gray-400">Strategies, guides, and tech breakdowns.</p>
                         </div>
                     </div>
+
+                    <div id="blog-grid" class="grid md:grid-cols-3 gap-8">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="article-view" class="page-section">
+            <div class="pt-32 pb-20 bg-brand-black min-h-screen">
+                <div class="fixed top-0 left-0 h-1 bg-brand-blue z-[60] w-0 transition-all duration-300" id="scroll-progress"></div>
+
+                <div class="container mx-auto px-6 max-w-4xl">
+                    
+                    <a href="/blog" data-link class="inline-flex items-center text-gray-400 hover:text-brand-cyan mb-8 transition">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Insights
+                    </a>
+
+                    <div class="mb-12 text-center">
+                        <div id="article-meta" class="flex justify-center gap-4 text-sm text-gray-500 mb-6">
+                            </div>
+                        <h1 id="article-title" class="text-3xl md:text-6xl font-heading font-bold text-white mb-8 leading-tight">
+                            </h1>
+                        <img id="article-image" src="" alt="Cover" class="w-full h-64 md:h-96 object-cover rounded-3xl border border-white/10 shadow-2xl">
+                    </div>
+
+                    <div id="article-body" class="prose prose-invert prose-lg max-w-none text-gray-300">
+                        </div>
+
+                    <div class="mt-16 pt-10 border-t border-white/10 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-white">
+                            <i class="fas fa-user-edit"></i>
+                        </div>
+                        <div>
+                            <div class="text-white font-bold" id="article-author">Author Name</div>
+                            <div class="text-xs text-gray-500">Mediofia Editorial Team</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 p-8 rounded-2xl bg-gradient-to-r from-brand-card to-black border border-white/10 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-4">Want to implement this?</h3>
+                        <p class="text-gray-400 mb-6">Our team can help you execute this strategy for your brand.</p>
+                        <a href="/contact" data-link class="px-8 py-3 bg-brand-blue text-white rounded-full font-bold hover:bg-blue-600 transition">Book Strategy Call</a>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -1552,6 +1551,8 @@
             </div>
         </div>
     </footer>
+    
+    <script src="js/blog-data.js"></script>
 
     <script src="js/main.js"></script>
 
